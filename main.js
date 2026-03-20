@@ -23,7 +23,7 @@ function createGrid(num) {
 
 elements.container.addEventListener('mouseover', (e) => {
   if (e.target.classList.contains('square')) {
-    e.target.classList.add('black')
+    e.target.classList.add('green')
   }
 })
 
@@ -33,9 +33,16 @@ document.addEventListener('click', (e) => {
     createGrid(Math.pow(elements.setSize.value, 2))
   }
 
-  elements.setSize.addEventListener('input', () => {
-    if (elements.setSize.value > 64) {
-      elements.setSize.value = 64
-    }
-  })
+  if (e.target.classList.contains('clear')) {
+    [...elements.container.children].forEach(child => {
+      child.classList.add('uncolored')
+      child.classList.remove('green')
+    })
+  }
+})
+
+elements.setSize.addEventListener('input', () => {
+  if (elements.setSize.value > 64) {
+    elements.setSize.value = 64
+  }
 })
