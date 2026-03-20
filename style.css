@@ -1,15 +1,58 @@
+:root {
+  --green: #00b806;
+  --black: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Silkscreen', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1rem;
+  justify-items: center;
+  letter-spacing: 5 px;
+}
+
+.wrapper > h1 {
+  color: var(--green);
+}
+
 .container {
-  border: 2px solid black;
+  border: 2px solid var(--green);
   width: 500px;
   height: 500px;
   display: flex;
   flex-wrap: wrap;
+}
+
+#size { 
+  outline: none;
+  background-color: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 0.3rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.sizing > button {
+  background-color: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 0.3rem;
+  font-weight: 600;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -21,5 +64,5 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .black {
-  background-color: black;
+  background-color: var(--green);
 }

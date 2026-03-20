@@ -11,7 +11,7 @@ function createGrid(num) {
     const square = document.createElement('div')
     square.classList.add('square')
     square.style.cssText = `
-      border: 1px solid black;
+      border: 1px solid var(--green);
       height: ${(500 - 4) / Math.sqrt(num)}px;
       width: ${(500 - 4) / Math.sqrt(num)}px;
       gap: 0;
